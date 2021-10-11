@@ -25,7 +25,14 @@
     {{ checked }}
   </label>
   <label>
-    <input type="checkbox" v-model="checked2" true-value="yes" false-value="no" name id />
+    <input
+      type="checkbox"
+      v-model="checked2"
+      true-value="yes"
+      false-value="no"
+      name
+      id
+    />
     {{ checked2 }}
   </label>
   <br />
@@ -64,16 +71,21 @@
   <img v-bind:src="imgSrc" alt />
   <h2>button 객체의 disabled</h2>
   <input type="text" v-model="textValue" />
-  <button type="button" v-bind:disabled="textValue==''">Click</button>
+  <button type="button" v-bind:disabled="textValue == ''">Click</button>
   <hr />
   <h1>5. 클래스 바인딩</h1>
   <div
     class="container"
     v-bind:class="{
-    'active': isActive, 'text-red': hasError
+      active: isActive,
+      'text-red': hasError,
     }"
-  >Class Binding</div>
-  <div class="container" v-bind:class="[activeClass, errorClass]">Class Binding</div>
+  >
+    Class Binding
+  </div>
+  <div class="container" v-bind:class="[activeClass, errorClass]">
+    Class Binding
+  </div>
   <hr />
   <h1>6. 인라인 스타일 바인딩</h1>
   <div v-bind:style="styleObject">인스인 스타일 바인딩</div>
@@ -103,10 +115,10 @@ export default {
       errorClass: "text-red",
       styleObject: {
         color: "red",
-        fontSize: "20px"
-      }
+        fontSize: "20px",
+      },
     };
-  }
+  },
 };
 </script>
 <style scoped>
